@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginBottom="10dp"
+    android:elevation="4dp"
+    android:radius="12dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <!-- Nombre de la Losa -->
+        <TextView
+            android:id="@+id/tvLosa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Losa"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#1ABC9C" />
+
+        <!-- Fecha -->
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:textColor="#333333"
+            android:layout_marginTop="4dp" />
+
+        <!-- Horas -->
+        <TextView
+            android:id="@+id/tvHoras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horas"
+            android:textColor="#333333"
+            android:layout_marginTop="2dp" />
+
+        <!-- Estado -->
+        <TextView
+            android:id="@+id/tvEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado"
+            android:textColor="#333333"
+            android:layout_marginTop="2dp" />
+
+        <!-- Botón Cancelar -->
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar reserva"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

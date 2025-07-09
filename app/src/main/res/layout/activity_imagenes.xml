@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#F4FDF9"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Campo Nombre de la imagen -->
+    <EditText
+        android:id="@+id/etNombreImagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la imagen"
+        android:background="@android:drawable/editbox_background"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Campo Ruta de la imagen -->
+    <EditText
+        android:id="@+id/etRutaImagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ruta (ej: drawable/losa1.png)"
+        android:background="@android:drawable/editbox_background"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón Agregar -->
+    <Button
+        android:id="@+id/btnAgregarImagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Imagen"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1ABC9C"
+        android:drawableStart="@android:drawable/ic_menu_add"
+        android:paddingVertical="12dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Texto Lista -->
+    <TextView
+        android:text="📷 Lista de imágenes:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#1ABC9C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvImagenes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:clipToPadding="false"
+        android:padding="4dp" />
+</LinearLayout>
+

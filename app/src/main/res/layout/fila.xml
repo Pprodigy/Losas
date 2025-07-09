@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        android:backgroundTint="#FFFFFF">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <!-- Imagen -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/losa_default"
+                android:contentDescription="Imagen de la losa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/losa_default" />
+
+            <!-- Nombre -->
+            <TextView
+                android:id="@+id/filaNombreLosa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre de la Losa"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#1ABC9C"
+                app:layout_constraintStart_toEndOf="@id/imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/filaEditar"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Descripción -->
+            <TextView
+                android:id="@+id/tvDescripcionLosa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cancha techada con luz"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/filaNombreLosa"
+                app:layout_constraintTop_toBottomOf="@id/filaNombreLosa"
+                app:layout_constraintEnd_toEndOf="@id/filaNombreLosa" />
+
+            <!-- Horario -->
+            <TextView
+                android:id="@+id/tvHorarioLosa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Lun - Dom, 7am - 10pm"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@id/filaNombreLosa"
+                app:layout_constraintTop_toBottomOf="@id/tvDescripcionLosa"
+                app:layout_constraintEnd_toEndOf="@id/filaNombreLosa" />
+
+            <!-- Dirección -->
+            <TextView
+                android:id="@+id/tvDireccionLosa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Av. Principal 123"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@id/filaNombreLosa"
+                app:layout_constraintTop_toBottomOf="@id/tvHorarioLosa"
+                app:layout_constraintEnd_toEndOf="@id/filaNombreLosa" />
+
+            <!-- Mantenimiento -->
+            <TextView
+                android:id="@+id/tvMantenimientoLosa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Incluye mantenimiento"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@id/filaNombreLosa"
+                app:layout_constraintTop_toBottomOf="@id/tvDireccionLosa"
+                app:layout_constraintEnd_toEndOf="@id/filaNombreLosa" />
+
+            <!-- Precio por hora -->
+            <TextView
+                android:id="@+id/tvPxHLosa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="S/ 30.00 x hora"
+                android:textStyle="bold"
+                android:textColor="#1ABC9C"
+                app:layout_constraintStart_toStartOf="@id/filaNombreLosa"
+                app:layout_constraintTop_toBottomOf="@id/tvMantenimientoLosa"
+                app:layout_constraintEnd_toEndOf="@id/filaNombreLosa"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Botón Reservar (solo visible para cliente) --><!-- Botón Reservar -->
+
+
+            <!-- Botón Editar -->
+
+            <ImageButton
+                android:id="@+id/filaReservar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Reservar"
+                android:scaleType="centerInside"
+                android:tint="#1ABC9C"
+                android:tooltipText="Reservar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.522"
+                app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+            <ImageButton
+                android:id="@+id/filaEditar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Editar"
+                android:tooltipText="Editar"
+                android:tint="#2980B9"
+                android:scaleType="centerInside"
+                app:srcCompat="@android:drawable/ic_menu_edit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/filaEliminar" />
+
+            <!-- Botón Eliminar -->
+            <ImageButton
+                android:id="@+id/filaEliminar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Eliminar"
+                android:tooltipText="Eliminar"
+                android:tint="#E74C3C"
+                android:scaleType="centerInside"
+                app:srcCompat="@android:drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+

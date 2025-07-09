@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Reserva_losas</string>
+    <string-array name="tipos_usuario">
+        <item>cliente</item>
+        <item>admin</item>
+    </string-array>
+</resources>
+

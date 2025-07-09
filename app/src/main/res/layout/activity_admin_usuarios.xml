@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_admin_usuarios"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4FDF9"
+    android:padding="16dp"
+    tools:context=".AdminUsuariosActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTituloUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestión de Usuarios"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1ABC9C"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón Agregar Usuario -->
+    <Button
+        android:id="@+id/btnAgregarUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ Agregar Usuario"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1ABC9C"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Botón Ir a Gestión de Losas -->
+    <Button
+        android:id="@+id/btnIrALosas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🏟️ Ir a Gestión de Losas"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1ABC9C" />
+
+    <!-- Barra de progreso -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
+    <!-- RecyclerView de Usuarios -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:padding="4dp"
+        android:clipToPadding="false" />
+</LinearLayout>
+

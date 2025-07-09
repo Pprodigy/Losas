@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F4FDF9">
+
+    <!-- Nombre del usuario -->
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Juan José"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1ABC9C"
+        android:paddingBottom="4dp" />
+
+    <!-- Correo del usuario -->
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="correo@ejemplo.com"
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:paddingBottom="16dp" />
+
+    <!-- Botón cerrar sesión -->
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar Sesión"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#E74C3C"
+        android:drawableStart="@android:drawable/ic_lock_power_off"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Botón para ir a reservar -->
+    <Button
+        android:id="@+id/btnIrAReservar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ir a Reservar"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1ABC9C"
+        android:drawableStart="@android:drawable/ic_menu_agenda"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Título sección de reservas -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mis Reservas"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#1ABC9C"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Lista de reservas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReservas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:background="#FFFFFF"
+        android:padding="4dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>
+

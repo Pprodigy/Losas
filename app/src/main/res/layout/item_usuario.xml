@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginBottom="10dp"
+    android:elevation="4dp"
+    android:radius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <!-- Nombre del Usuario -->
+        <TextView
+            android:id="@+id/tvNombreUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre Apellido"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#1ABC9C" />
+
+        <!-- Tipo de Usuario -->
+        <TextView
+            android:id="@+id/tvTipoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo: admin/cliente"
+            android:textColor="#00796B"
+            android:layout_marginTop="4dp" />
+
+        <!-- Correo -->
+        <TextView
+            android:id="@+id/tvCorreoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="correo@ejemplo.com"
+            android:layout_marginTop="2dp"
+            android:textColor="#444444" />
+
+        <!-- DNI -->
+        <TextView
+            android:id="@+id/tvDniUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DNI: 12345678"
+            android:layout_marginTop="2dp"
+            android:textColor="#444444" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
